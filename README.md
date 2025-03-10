@@ -11,73 +11,7 @@
 
 ## 项目启动
 
-## Trae AI
-使用了 1 个参考
-
-在 api-agent 模块中实现API的启动时获取和启动后获取，通常需要以下步骤：
-
-1. 启动时获取API ：可以在Agent的初始化阶段，通过扫描类路径或解析字节码来获取API信息。
-2. 启动后获取API ：可以通过拦截HTTP请求或使用AOP技术来动态获取API信息。
-以下是实现思路的代码示例：
-
-```java
-public class ApiAgent {
-    // 启动时获取的API缓存
-    private static Map<String, ApiInfo> startupApis = new ConcurrentHashMap<>();
-    
-    // 初始化方法，在Agent启动时调用
-    public static void initialize() {
-        // 扫描类路径，获取所有API信息
-        scanClasspathForApis();
-    }
-    
-    private static void scanClasspathForApis() {
-        // 使用ASM或Javassist扫描类文件，解析API信息
-        // 将解析到的API信息存入startupApis
-    }
-    
-    // 启动后获取API的方法
-    public static void captureRuntimeApi(HttpServletRequest request) {
-        // 解析请求信息，获取API路径、参数等信息
-        ApiInfo apiInfo = parseRequest(request);
-        
-        // 将API信息存入缓存或发送到收集器
-        processApiInfo(apiInfo);
-    }
-    
-    // ... 其他辅助方法 ...
-}
-```
-```
-
-```java
-public class ApiInfo {
-    private String path;
-    private String method;
-    private Map<String, String> parameters;
-    
-    // ... getters and setters ...
-}
-```
-
-在 pom.xml 中，你已经配置了必要的依赖（ASM、Javassist等），这些工具可以帮助实现API的扫描和拦截。
-
-实现要点：
-
-1. 使用ASM或Javassist进行字节码操作，在类加载时扫描API信息
-2. 使用Servlet Filter或Spring AOP拦截HTTP请求，获取运行时API信息
-3. 将获取到的API信息存储或发送到收集器
-你需要根据具体的框架（如Spring MVC）来实现具体的API解析逻辑。如果需要更详细的实现细节，请告诉我你使用的具体框架。
-
-## yokilee1
-复制
-
-删除
-
-agent_demo
-
-## Trae AI
-要运行这个项目，你可以按照以下步骤操作：
+运行这个项目，你可以按照以下步骤操作：
 
 1. 首先构建整个项目：
 ```bash
