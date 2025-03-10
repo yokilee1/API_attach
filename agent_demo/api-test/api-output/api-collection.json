@@ -1,0 +1,44 @@
+{
+  "totalCount" : 5,
+  "apis" : [ {
+    "id" : 3,
+    "className" : "io.dongtai.api.test.controller.TestController",
+    "methodName" : "getUser",
+    "httpMethod" : "GET",
+    "path" : "/api/user/{id}",
+    "parameters" : {
+      "id" : "path",
+      "param1" : "query"
+    }
+  }, {
+    "id" : 5,
+    "className" : "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+    "methodName" : "error",
+    "httpMethod" : "REQUEST",
+    "path" : "${server.error.path:${error.path:/error}}",
+    "parameters" : { }
+  }, {
+    "id" : 2,
+    "className" : "io.dongtai.api.test.controller.TestController",
+    "methodName" : "echo",
+    "httpMethod" : "POST",
+    "path" : "/api/echo",
+    "parameters" : {
+      "param0" : "body"
+    }
+  }, {
+    "id" : 4,
+    "className" : "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+    "methodName" : "errorHtml",
+    "httpMethod" : "REQUEST",
+    "path" : "${server.error.path:${error.path:/error}}",
+    "parameters" : { }
+  }, {
+    "id" : 1,
+    "className" : "io.dongtai.api.test.controller.TestController",
+    "methodName" : "hello",
+    "httpMethod" : "GET",
+    "path" : "/api/hello",
+    "parameters" : { }
+  } ]
+}

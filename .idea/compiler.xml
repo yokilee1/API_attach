@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dongtai-api" />
+        <module name="dongtai-api-gather-dubbo-api" />
+        <module name="dongtai-spy" />
+        <module name="vuln-test" />
+        <module name="dongtai-agent" />
+        <module name="dongtai-log" />
+        <module name="dongtai-core" />
+        <module name="vuln-springboot3" />
+        <module name="dongtai-grpc" />
+        <module name="dongtai-api-gather-spring-api" />
+        <module name="dongtai-common" />
+        <module name="vuln-core" />
+        <module name="dongtai-api-gather-openapi" />
+        <module name="vuln-springboot2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo-agent" target="1.8" />
+      <module name="demo-app" target="1.8" />
+      <module name="dongtai-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
